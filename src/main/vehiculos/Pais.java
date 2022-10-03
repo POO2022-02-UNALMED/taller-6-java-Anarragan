@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Pais {
 	private String nombre;
-	private int canti = 0;
+	private int cantidad = 0;
 	private static ArrayList<Pais>
 	paises=new ArrayList<Pais>();
 	
@@ -12,7 +12,7 @@ public class Pais {
 		Pais mayor = paises.get(0);
 		
 		for(Pais i:paises) {
-				if(i.canti > mayor.canti) {
+				if(i.cantidad > mayor.cantidad) {
 				mayor = i;
 				}
 			}
@@ -22,7 +22,7 @@ public class Pais {
 	
 	public Pais(String nombre) {
 		this.nombre=nombre;	
-		canti = 0;
+		cantidad = 0;
 		paises.add(this);
 		
 	}
@@ -36,7 +36,7 @@ public class Pais {
 	}
 	
 	public void sumarVentas() {
-		canti +=1;
+		cantidad +=1;
 	}
 	
 	public static ArrayList<Pais> getPaises(){

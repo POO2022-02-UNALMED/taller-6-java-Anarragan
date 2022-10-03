@@ -20,7 +20,8 @@ public class Vehiculo {
     	CantidadVehiculos++;
     }
     
-    public Vehiculo(String placa, int puertas, float velocidadMaxima, String nombre, float precio, float peso, String traccion, Fabricante fabricante) { 
+    public Vehiculo(String placa, int puertas, float velocidadMaxima, String nombre, 
+    		float precio, float peso, String traccion, Fabricante fabricante) { 
     
     	this();
     	this.nombre = nombre;
@@ -32,7 +33,6 @@ public class Vehiculo {
         this.puertas = puertas;
         this.velocidadMaxima = velocidadMaxima;
         
-        this.sumarVentas();
         }
       
         public String getNombre() {
@@ -110,17 +110,11 @@ public class Vehiculo {
 
 
         public static String vehiculosPorTipo() {
-            return  "Automoviles: " + CantidadAutomoviles + "\nCamionetas: " + CantidadCamionetas + "\nCamiones: " + CantidadCamiones;
+            return  "Automoviles: " + CantidadAutomoviles + "\nCamionetas: " 
+        + CantidadCamionetas + "\nCamiones: " + CantidadCamiones;
         }
         
-        private void sumarVentas() {
-            if (this.fabricante != null) {
-                this.fabricante.sumarVentas();
-                if (this.fabricante.getPais() != null) {
-                    this.fabricante.getPais().sumarVentas();
-                }
-            }
-        }
+        
 }
 
 
