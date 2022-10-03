@@ -1,14 +1,10 @@
 package vehiculos;
 
-public class Camioneta extends Vehiculo {
+public class Camioneta extends Vehiculo{
 	
 	private boolean volco;
 
-	public Camioneta(String placa, int puertas, String nombre, int precio, int peso, Fabricante fabricante, boolean volco) {
-		super(placa, puertas, 90, nombre, precio, peso, "4X4", fabricante);
-		this.volco = volco;
-		Vehiculo.CantidadCamionetas++;
-	}
+//Getters and setters, but the attribute volco is boolean for this reason is "is" 
 	
 	public boolean isVolco() {
 		return volco;
@@ -16,6 +12,13 @@ public class Camioneta extends Vehiculo {
 	public void setVolco(boolean volco) {
 		this.volco = volco;
 	}
-
+	
+//methods
+	public Camioneta(String placa, int puertas, String nombre, int precio, int peso, Fabricante fabricante, boolean volco) {
+		super(placa, puertas, 90, nombre, precio, peso, "4X4", fabricante);
+		this.volco = volco;
+		Vehiculo.CantidadCamionetas++;
+	}
+	
 
 }
