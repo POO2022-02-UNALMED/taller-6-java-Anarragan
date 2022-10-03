@@ -23,7 +23,7 @@ public class Vehiculo {
     public Vehiculo(String placa, int puertas, float velocidadMaxima, String nombre, 
     		float precio, float peso, String traccion, Fabricante fabricante) { 
     
-    	this();
+    	super();
     	this.nombre = nombre;
         this.precio = precio;
         this.peso = peso;
